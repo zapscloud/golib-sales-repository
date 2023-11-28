@@ -32,7 +32,7 @@ const (
 	DbProdPreferences   = DbPrefix + "sales_prod_preferences"
 	DbPages             = DbPrefix + "sales_pages"
 	DbDealers           = DbPrefix + "sales_dealers"
-	DbDiscounts         = DbPrefix + "sales_discounts"
+	DbOffers            = DbPrefix + "sales_offers"
 	DbMedias            = DbPrefix + "sales_medias"
 	DbQuiz              = DbPrefix + "sales_quiz"
 	DbCampaigns         = DbPrefix + "sales_campaigns"
@@ -42,6 +42,7 @@ const (
 	DbCoupons           = DbPrefix + "sales_coupons"
 	DbCustomerTypes     = DbPrefix + "sales_customer_types"
 	DbTerritories       = DbPrefix + "sales_territories"
+	DbCallbacks         = DbPrefix + "sales_callbacks"
 )
 
 const (
@@ -152,8 +153,8 @@ const (
 	// Fields for Media
 	FLD_MEDIA_ID = "media_id"
 
-	// Fields for Discount
-	FLD_DISCOUNT_ID = "discount_id"
+	// Fields for Offer
+	FLD_OFFER_ID = "offer_id"
 
 	// Fields for Quiz
 	FLD_QUIZ_ID = "quiz_id"
@@ -184,6 +185,13 @@ const (
 	// Fields for Territory
 	FLD_TERRITORY_ID   = "territory_id"
 	FLD_TERRITORY_NAME = "territory_name"
+
+	// Field For Callback
+	FLD_CALLBACK_ID           = "callback_id"
+	FLD_IS_FULFILLED          = "is_fulfilled"
+	FLD_CUSTOMER_NAME         = "customer_name"
+	FLD_CUSTOMER_EMAIL        = "customer_email"
+	FLD_CUSTOMER_MOBILE_NUMER = "customer_mobile_number"
 )
 
 func init() {
