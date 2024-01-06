@@ -62,6 +62,7 @@ func (t *CustomerOrderMongoDBDao) List(filter string, sort string, skip int64, l
 			log.Println("Sort Unmarshal Error ", sort)
 		} else {
 			opts.SetSort(sortdoc)
+			opts.SetAllowDiskUse(true) // Set allowDiskUse to true
 		}
 	}
 
