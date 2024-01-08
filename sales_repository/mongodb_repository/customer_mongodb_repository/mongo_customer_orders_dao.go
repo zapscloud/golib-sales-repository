@@ -43,8 +43,8 @@ func (t *CustomerOrderMongoDBDao) List(filter string, sort string, skip int64, l
 
 	log.Println("Get Collection - Find All Collection Dao", filter, len(filter), sort, len(sort))
 
-	opts := options.Find().SetAllowDiskUse(true) // Set allowDiskUse to true
-
+	opts := options.Find()
+	opts.SetAllowDiskUse(true) // Set allowDiskUse to true
 	filterdoc := bson.D{}
 	if len(filter) > 0 {
 		// filters, _ := strconv.Unquote(string(filter))
