@@ -43,7 +43,7 @@ func (t *CustomerOrderMongoDBDao) List(filter string, sort string, skip int64, l
 
 	log.Println("Get Collection - Find All Collection Dao", filter, len(filter), sort, len(sort))
 
-	opts := options.Find()
+	opts := options.Find().SetAllowDiskUse(true) // Set allowDiskUse to true
 
 	filterdoc := bson.D{}
 	if len(filter) > 0 {
@@ -62,7 +62,7 @@ func (t *CustomerOrderMongoDBDao) List(filter string, sort string, skip int64, l
 			log.Println("Sort Unmarshal Error ", sort)
 		} else {
 			opts.SetSort(sortdoc)
-			opts.SetAllowDiskUse(true) // Set allowDiskUse to true
+
 		}
 	}
 
