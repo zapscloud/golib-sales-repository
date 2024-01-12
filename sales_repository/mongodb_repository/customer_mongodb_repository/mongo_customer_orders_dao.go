@@ -83,7 +83,7 @@ func (t *CustomerOrderMongoDBDao) List(filter string, sort string, skip int64, l
 		filterdoc = append(filterdoc, bson.E{Key: sales_common.FLD_CUSTOMER_ID, Value: t.customerId})
 	}
 
-	log.Println("Parameter values ", filterdoc, opts)
+	
 	cursor, err := collection.Find(ctx, filterdoc, opts)
 	if err != nil {
 		return nil, err
