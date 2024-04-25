@@ -43,6 +43,7 @@ const (
 	DbCustomerTypes     = DbPrefix + "sales_customer_types"
 	DbTerritories       = DbPrefix + "sales_territories"
 	DbCallbacks         = DbPrefix + "sales_callbacks"
+	DbClgOTPs           = DbPrefix + "sales_clg_otps"
 )
 
 const (
@@ -58,6 +59,7 @@ const (
 	// Common fields for all tables
 	FLD_BUSINESS_ID = platform_common.FLD_BUSINESS_ID
 	FLD_SEO_KEYID   = "seo_key_id"
+	FLD_FILTERED_COUNT = "filtered_count"
 
 	// Fields for Region
 	FLD_REGION_ID           = "sales_region_id"
@@ -192,6 +194,11 @@ const (
 	FLD_CUSTOMER_NAME         = "customer_name"
 	FLD_CUSTOMER_EMAIL        = "customer_email"
 	FLD_CUSTOMER_MOBILE_NUMER = "customer_mobile_number"
+
+	// OTP Table
+	FLD_OTP_ID  = "otp_id"
+	FLD_OTP_KEY = "otp_key"
+	FLD_OTP_VAL = "otp_value"
 )
 
 func init() {
