@@ -44,6 +44,7 @@ const (
 	DbTerritories       = DbPrefix + "sales_territories"
 	DbCallbacks         = DbPrefix + "sales_callbacks"
 	DbClgOTPs           = DbPrefix + "sales_clg_otps"
+	DbFirmnesss         = DbPrefix + "sales_firmness"
 )
 
 const (
@@ -57,8 +58,8 @@ const (
 // Product Module table fields
 const (
 	// Common fields for all tables
-	FLD_BUSINESS_ID = platform_common.FLD_BUSINESS_ID
-	FLD_SEO_KEYID   = "seo_key_id"
+	FLD_BUSINESS_ID    = platform_common.FLD_BUSINESS_ID
+	FLD_SEO_KEYID      = "seo_key_id"
 	FLD_FILTERED_COUNT = "filtered_count"
 
 	// Fields for Region
@@ -110,6 +111,10 @@ const (
 	FLD_CUSTOMER_LOGIN_ID = "customer_loginid"
 	FLD_CUSTOMER_PASSWORD = "customer_password"
 	FLD_CUSTOMER_OTP      = "customer_otp"
+
+	// Fields for Customer Table
+	FLD_FIRMNESS_ID   = "firmness_id"
+	FLD_FIRMNESS_NAME = "firmness_name"
 
 	// Field for Customer Type Table
 	FLD_CUSTOMER_TYPE_ID = "customertype_id"
