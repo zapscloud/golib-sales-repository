@@ -45,8 +45,9 @@ const (
 	DbCallbacks         = DbPrefix + "sales_callbacks"
 	DbClgOTPs           = DbPrefix + "sales_clg_otps"
 	DbFirmnesss         = DbPrefix + "sales_firmness"
+	DbProductUnit       = DbPrefix + "sales_product_units"
+	DbService           = DbPrefix + "sales_services"
 )
-
 const (
 	ORDER_STATUS_ORDERED   = "ordered"
 	ORDER_STATUS_CONFIRMED = "confirmed"
@@ -87,6 +88,7 @@ const (
 	// Fields for Category Table
 	FLD_CATEGORY_ID   = "category_id"
 	FLD_CATEGORY_NAME = "category_name"
+	FLD_CATEGORY_INFO = "category_info"
 
 	// Fields for Product Table
 	FLD_PRODUCT_ID   = "product_id"
@@ -204,6 +206,16 @@ const (
 	FLD_OTP_ID  = "otp_id"
 	FLD_OTP_KEY = "otp_key"
 	FLD_OTP_VAL = "otp_value"
+
+	// Product_unit module table fields
+	FLD_PRODUCT_UNIT_ID   = "product_unit_id"
+	FLD_PRODUCT_UNIT_NAME = "product_unit_name"
+	FLD_PRODUCT_UNIT_DESC = "product_unit_desc"
+
+	// Field for service Table
+	FLD_SERVICE_ID   = "service_id"
+	FLD_SERVICE_NAME = "service_name"
+	FLD_SERVICE_DESC = "service_desc"
 )
 
 func init() {
